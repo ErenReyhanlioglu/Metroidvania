@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41e72a36171bae45bc4d75e7f3ca28e, type: 3}
+  m_Name: ElectricCompanionCharm
+  m_EditorClassIdentifier: 
+  charmName: Electric Companion
+  description: "The Stormflower enables the character to inflict electric shocks
+    on enemies they hit. If the character isn\u2019t engaging with enemies, the flowers
+    connect to the room's lightning rods to assist with puzzles."
+  isCharmDiscovered: 0
+  isCharmActive: 0
+  cost: 0
+  icon: {fileID: 0}
+  triggerType: 0

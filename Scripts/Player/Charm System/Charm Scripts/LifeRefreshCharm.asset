@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14293668b5b755c4ea14d77ab491d0ee, type: 3}
+  m_Name: LifeRefreshCharm
+  m_EditorClassIdentifier: 
+  charmName: Life Refresh
+  description: Restores a small amount of health each time an enemy is defeated.
+    Useful for constant healing during battles.
+  isCharmDiscovered: 0
+  isCharmActive: 0
+  cost: 0
+  icon: {fileID: 0}
+  triggerType: 0

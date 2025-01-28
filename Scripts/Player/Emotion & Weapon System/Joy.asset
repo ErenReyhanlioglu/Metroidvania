@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df5eb6b2747c7042a86b3b1f46a68cd, type: 3}
+  m_Name: Joy
+  m_EditorClassIdentifier: 
+  customInsObjEmotions:
+    emotionType: 0
+    dashCoolDown: 1.5
+    dashDuration: 0.5
+    dashSpeed: 10
+    dashDistance: 5
+    angerDashTimeScale: 0
+    angerMaxDashDistance: 0
