@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SpeedBoostCharm", menuName = "Charms/Speed Boost")]
@@ -14,9 +15,16 @@ public class SpeedBoostCharm : CharmBase
 
     public override bool OnInitializeCharm(GameObject _player)
     {
-        playerMovement = _player.GetComponent<PlayerMovement>();
-
-        return playerMovement != null;
+        try
+        {
+            playerMovement = _player.GetComponent<PlayerMovement>();
+            return playerMovement != null;
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error in OnInitializeCharm: {ex.Message}");
+            return false;
+        }
     }
 
     public override bool ActivateCharm()

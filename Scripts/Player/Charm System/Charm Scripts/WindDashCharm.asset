@@ -15,8 +15,13 @@ MonoBehaviour:
   charmName: Wind Dash
   description: Reduces the cooldown of the dash ability, enabling more frequent dashes.
     Perfect for skilled players who excel at dodging and quick movement.
-  isCharmDiscovered: 0
+  isCharmDiscovered: 1
   isCharmActive: 0
   cost: 0
   icon: {fileID: 0}
   triggerType: 0
+  coolDownReduce: 0.3
+  characterEmotions:
+  - {fileID: 11400000, guid: 637e5fd8ebfb203488af380dc12f29db, type: 2}
+  - {fileID: 11400000, guid: 3cfe992df3978024ba977d9d3d5f257e, type: 2}
+  - {fileID: 11400000, guid: 40522f9bbd1f8214d8256e92bade82ba, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customInsObjEmotions:
     emotionType: 2
-    dashCoolDown: 5
+    dashCoolDown: 3
     dashDuration: 0.01
     dashSpeed: 100
     dashDistance: 0

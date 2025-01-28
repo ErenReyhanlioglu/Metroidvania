@@ -28,9 +28,7 @@ public class Dash : MonoBehaviour
 
     private void Update()
     {
-       
         customInsObjForEmotions = characterEmotionSystem.currentEmotion.customInsObjEmotions;
-
        
         if (dashCooldownTimer > 0)
         {
@@ -113,8 +111,9 @@ public class Dash : MonoBehaviour
 
     private void HandleSadnessDash()
     {
-        StartDirectionalDash();
         Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("SadTriggerWall"), true);
+        StartDirectionalDash();
+        Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("SadTriggerWall"), false);
     }
 
     private void StartDirectionalDash()
@@ -122,12 +121,10 @@ public class Dash : MonoBehaviour
         collisionCheck.isDashing = true;
         dashTime = 0;
 
-        
         dashDirection = new Vector2(playerMovement.moveInputHori, 0).normalized;
         if (playerMovement.moveInputHori == 0)
         {
             dashDirection = playerMovement.isFacingRight ? Vector2.right : Vector2.left;
-           
         }
 
         StartCoroutine(DirectionalDashCoroutine());

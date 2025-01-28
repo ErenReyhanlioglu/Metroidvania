@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CollisonCheck : MonoBehaviour
 {
-    [Header("Collison Parameters")]
+    [Header("Collison Parameters")] // Gereksiz raycastler, kaldýrýlacak. Raycast yerine overlap circle kullanýlabilir.
     public Transform[] groundCheck;
     public Transform[] ceilCheck;
     public Transform leftSideCheck;
@@ -88,7 +88,6 @@ public class CollisonCheck : MonoBehaviour
             }
         }
     }
-
 
     void OnDrawGizmos()
     {

@@ -67,36 +67,22 @@ public class CharmPanelUI : MonoBehaviour
     {
         selectedCharm = senderCharm;
 
-        if(selectedCharm != null)
+        if (selectedCharm == null) return;
+
+        bool control = CharmManager.activeCharms.Contains(selectedCharm)
+            ? CharmManager.DeactivateCharm(selectedCharm)
+            : CharmManager.ActivateCharm(selectedCharm);
+
+        if (control && charmUI != null)
         {
-            if(CharmManager.activeCharms.Contains(selectedCharm))
+            Image charmImage = charmUI.GetComponent<Image>();
+            if (charmImage != null)
             {
-                bool control = CharmManager.DeactivateCharm(selectedCharm);
-
-                if (control)
-                {
-                    Image charmImage = charmUI.GetComponent<Image>();
-                    if (charmImage != null)
-                    {
-                        charmImage.color = Color.white;
-                    }
-                }
-            }
-            else
-            {
-                bool control = CharmManager.ActivateCharm(selectedCharm);
-
-                if (control)
-                {
-                    Image charmImage = charmUI.GetComponent<Image>();
-                    if (charmImage != null)
-                    {
-                        charmImage.color = Color.green;
-                    }
-                }
+                charmImage.color = CharmManager.activeCharms.Contains(selectedCharm) ? Color.green : Color.white;
             }
         }
     }
+
 
     public void OnTabEnter(CharmBase senderCharm, GameObject charmUI)
     {
@@ -104,7 +90,7 @@ public class CharmPanelUI : MonoBehaviour
 
         selectedCharm = senderCharm;
 
-        if(selectedCharm != null)
+        if(selectedCharm != null && CharmManager.discoveredCharms.Contains(selectedCharm))
         {
             charmDescription.text = selectedCharm.description;
             charmCost.text = selectedCharm.cost.ToString();
